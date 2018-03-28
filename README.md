@@ -27,19 +27,25 @@ This framework requires the following to work properly:
 
 Firstly, we need to clone this repo:
 
-> git clone https://github.com/nubbthedestroyer/hashicorp-env-portability.git
+```bash
+git clone https://github.com/nubbthedestroyer/hashicorp-env-portability.git
+```
 
 In order to bring up the vagrant instance while passing it some variables, we need to use a script to do it.
 
 This script is named "build-vagrant.sh" located at the root of the repo.  Lets run it.
 
-> cd hashicorp-env-portability
-> ./build-vagrant.sh
+```bash
+cd hashicorp-env-portability
+./build-vagrant.sh
+```
 
 You will be asked about which network you want to use for the bridge.  Chose a network that will be exposed to a DHCP server so the box can get a network IP.  This is important for the local dev environment.  This install will take some time, as Vagrant will need to download and provision the box.  After this is complete you should be dropped into an SSH session on the vagrant box.  If you made it so far, then GREAT!  Next, let's start the united cluster build automation:
 
-> cd /vagrant
+```bash
+cd /vagrant
 > ./build-all-clusters.sh
+```
 
 This script has a lot to do.  For more information regarding each step, take a look at "./build-all-clusters.sh".  There is some bash magic involved in making this launch as smooth as possible, but much can be learned from following the way the clusters are configured.  This is not a production ready environment, but it could be a first step towards that.
 
