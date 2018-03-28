@@ -17,6 +17,12 @@ complex devops practices, that highly distributed environments are very difficul
 This framework requires the following to work properly:
 * AWS CLI tools
   * Both installed and configured with active AWS credentials.
+  * For more information or more detailed instructions, see here:
+    * https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
 * Vagrant
   * We will need the Vagrant binary to be in path so we can bring everything up.
-  * This entire environment will run in and through Vagrant, simplifying the system requirements to launch this cluster. 
+  * This entire environment will run in and through Vagrant, simplifying the system requirements to launch this cluster.
+
+## Let's Launch it!
+
+In order to bring up

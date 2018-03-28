@@ -1,0 +1,147 @@
+    No configuration files loaded
+==> Starting Nomad agent...
+==> Nomad agent configuration:
+
+                Client: true
+             Log Level: DEBUG
+                Region: global (DC: dc1)
+                Server: true
+               Version: 0.7.1
+
+==> Nomad agent started! Log data will stream in below:
+
+    2018/03/28 11:12:11 [INFO] raft: Initial configuration (index=1): [{Suffrage:Voter ID:192.168.1.21:4647 Address:192.168.1.21:4647}]
+    2018/03/28 11:12:11 [INFO] raft: Node at 192.168.1.21:4647 [Follower] entering Follower state (Leader: "")
+    2018/03/28 11:12:11 [INFO] serf: EventMemberJoin: ubuntu-xenial.global 192.168.1.21
+    2018/03/28 11:12:11.603857 [INFO] nomad: starting 2 scheduling worker(s) for [service batch system _core]
+    2018/03/28 11:12:11.603987 [INFO] client: using state directory /tmp/NomadClient110228539
+    2018/03/28 11:12:11.604013 [INFO] nomad: adding server ubuntu-xenial.global (Addr: 192.168.1.21:4647) (DC: dc1)
+    2018/03/28 11:12:11.604456 [DEBUG] server.nomad: lost contact with Nomad quorum, falling back to Consul for server list
+    2018/03/28 11:12:11.605622 [INFO] client: using alloc directory /tmp/NomadClient464865374
+    2018/03/28 11:12:11.606220 [WARN] consul.sync: failed to update services in Consul: error querying Consul services: Get http://127.0.0.1:8500/v1/agent/services: dial tcp 127.0.0.1:8500: getsockopt: connection refused
+    2018/03/28 11:12:11.606376 [ERR] consul: error looking up Nomad servers: server.nomad: unable to query Consul datacenters: Get http://127.0.0.1:8500/v1/catalog/datacenters: dial tcp 127.0.0.1:8500: getsockopt: connection refused
+    2018/03/28 11:12:11.606647 [DEBUG] client: built-in fingerprints: [arch cgroup consul cpu host memory network nomad signal storage vault env_aws env_gce]
+    2018/03/28 11:12:11.606751 [INFO] fingerprint.cgroups: cgroups are available
+    2018/03/28 11:12:11.606861 [DEBUG] client: fingerprinting cgroup every 15s
+    2018/03/28 11:12:11.607003 [DEBUG] fingerprint.cpu: frequency: 2494 MHz
+    2018/03/28 11:12:11.607006 [DEBUG] fingerprint.cpu: core count: 2
+    2018/03/28 11:12:11.610199 [DEBUG] client: fingerprinting consul every 15s
+    2018/03/28 11:12:11.614183 [WARN] fingerprint.network: Unable to parse Speed in output of '/sbin/ethtool lo'
+    2018/03/28 11:12:11.614226 [DEBUG] fingerprint.network: Unable to read link speed from /sys/class/net/lo/speed
+    2018/03/28 11:12:11.614228 [DEBUG] fingerprint.network: link speed could not be detected and no speed specified by user. Defaulting to 1000
+    2018/03/28 11:12:11.614269 [DEBUG] fingerprint.network: Detected interface lo with IP: 127.0.0.1
+    2018/03/28 11:12:11.614270 [DEBUG] fingerprint.network: Detected interface lo with IP: ::1
+    2018/03/28 11:12:11.619836 [DEBUG] client: fingerprinting vault every 15s
+    2018/03/28 11:12:13 [WARN] raft: Heartbeat timeout from "" reached, starting election
+    2018/03/28 11:12:13 [INFO] raft: Node at 192.168.1.21:4647 [Candidate] entering Candidate state in term 2
+    2018/03/28 11:12:13 [DEBUG] raft: Votes needed: 1
+    2018/03/28 11:12:13 [DEBUG] raft: Vote granted from 192.168.1.21:4647 in term 2. Tally: 1
+    2018/03/28 11:12:13 [INFO] raft: Election won. Tally: 1
+    2018/03/28 11:12:13 [INFO] raft: Node at 192.168.1.21:4647 [Leader] entering Leader state
+    2018/03/28 11:12:13.318405 [INFO] nomad: cluster leadership acquired
+    2018/03/28 11:12:13.318592 [DEBUG] leader: reconciling job summaries at index: 0
+    2018/03/28 11:12:13.629099 [DEBUG] fingerprint.env_aws: Error querying AWS Metadata URL, skipping
+    2018/03/28 11:12:15.629577 [DEBUG] fingerprint.env_gce: Could not read value for attribute "machine-type"
+    2018/03/28 11:12:15.629710 [DEBUG] fingerprint.env_gce: Error querying GCE Metadata URL, skipping
+    2018/03/28 11:12:15.629727 [DEBUG] client: applied fingerprints [arch cgroup cpu host memory network nomad signal storage]
+    2018/03/28 11:12:15.629750 [DEBUG] driver.docker: using client connection initialized from environment
+    2018/03/28BootstrapExpect is set to 1; this is the same as Bootstrap mode.
+bootstrap = true: do not enable unless necessary
+==> Starting Consul agent...
+==> Consul agent running!
+           Version: 'v1.0.6'
+           Node ID: 'd931c252-8578-db88-f0cb-c128331424f7'
+         Node name: 'agent-one'
+        Datacenter: 'dc1' (Segment: '<all>')
+            Server: true (Bootstrap: true)
+       Client Addr: [0.0.0.0] (HTTP: 8500, HTTPS: -1, DNS: 8600)
+      Cluster Addr: 192.168.1.21 (LAN: 8301, WAN: 8302)
+           Encrypt: Gossip: false, TLS-Outgoing: false, TLS-Incoming: false
+
+==> Log data will now stream in as it occurs:
+
+    2018/03/28 11:12:11 [INFO] raft: Initial configuration (index=1): [{Suffrage:Voter ID:d931c252-8578-db88-f0cb-c128331424f7 Address:192.168.1.21:8300}]
+    2018/03/28 11:12:11 [INFO] raft: Node at 192.168.1.21:8300 [Follower] entering Follower state (Leader: "")
+    2018/03/28 11:12:11 [INFO] serf: EventMemberJoin: agent-one.dc1 192.168.1.21
+    2018/03/28 11:12:11 [INFO] serf: EventMemberJoin: agent-one 192.168.1.21
+    2018/03/28 11:12:11 [INFO] agent: Started DNS server 0.0.0.0:8600 (udp)
+    2018/03/28 11:12:11 [INFO] consul: Adding LAN server agent-one (Addr: tcp/192.168.1.21:8300) (DC: dc1)
+    2018/03/28 11:12:11 [INFO] consul: Handled member-join event for server "agent-one.dc1" in area "wan"
+    2018/03/28 11:12:11 [INFO] agent: Started DNS server 0.0.0.0:8600 (tcp)
+    2018/03/28 11:12:11 [INFO] agent: Started HTTP server on [::]:8500 (tcp)
+    2018/03/28 11:12:11 [INFO] agent: started state syncer
+    2018/03/28 11:12:18 [ERR] agent: failed to sync remote state: No cluster leader
+    2018/03/28 11:12:19 [WARN] agent: Syncing service "_nomad-server-kohdxbikg2nywmxqx3oem2ye3vkkzu5k" failed. No cluster leader
+    2018/03/28 11:12:19 [ERR] agent: failed to sync changes: No cluster leader
+    2018/03/28 11:12:19 [WARN] raft: Heartbeat timeout from "" reached, starting election
+    2018/03/28 11:12:19 [INFO] raft: Node at 192.168.1.21:8300 [Candidate] entering Candidate state in term 2
+    2018/03/28 11:12:19 [INFO] raft: Election won. Tally: 1
+    2018/03/28 11:12:19 [INFO] raft: Node at 192.168.1.21:8300 [Leader] entering Leader state
+    2018/03/28 11:12:19 [INFO] consul: cluster leadership acquired
+    2018/03/28 11:12:19 [INFO] consul: New leader elected: agent-one
+    2018/03/28 11:12:19 [INFO] consul: member 'agent-one' joined, marking health alive
+    2018/03/28 11:12:19 [INFO] agent: Synced service "_nomad-server-kohdxbikg2nywmxqx3oem2ye3vkkzu5k"
+    2018/03/28 11:12:19 [INFO] agent: Synced service "_nomad-server-bozo45hkhm54mitbglzuhvvxnlxf4ey7"
+    2018/03/28 11:12:19 [INFO] agent: Synced service "_nomad-server-jbgkcnld4u5hhp5oyabeulxkipflmbag"
+    2018/03/28 11:12:19 [INFO] agent: Synced service "_nomad-client-hgumx34i2wu4z72jndkexbesxxcfwk7b"
+    2018/03/28 11:12:19 [INFO] agent: Synced check "0451a7341e3fd52340e75931d7cffacbe14117ac"
+    2018/03/28 11:12:19 [INFO] agent: Synced check "b6aeda9f457bd83d772b524ddf2f4979e8c5e8bf"
+    2018/03/28 11:12:19 [INFO] agent: Synced check "73a0846d8aa93beec9bdfad21cc468e354567185"
+    2018/03/28 11:12:19 [INFO] agent: Synced check "1e107f9eaa6fae472b4e6749fa9dbbf83ce59bf1"
+ 11:12:15.643693 [DEBUG] driver.docker: bridge_ip could not be discovered
+    2018/03/28 11:12:15.643708 [DEBUG] driver.exec: exec driver is enabled
+    2018/03/28 11:12:15.643720 [WARN] driver.raw_exec: raw exec is enabled. Only enable if needed
+    2018/03/28 11:12:15.643822 [DEBUG] client: available drivers [docker exec raw_exec]
+    2018/03/28 11:12:15.644041 [DEBUG] client: fingerprinting docker every 15s
+    2018/03/28 11:12:15.644048 [DEBUG] client: fingerprinting exec every 15s
+    2018/03/28 11:12:15.644053 [DEBUG] client: fingerprinting rkt every 15s
+    2018/03/28 11:12:15.644062 [INFO] client: Node ID "e0eb2b6a-353d-1509-a312-bcc6a6db32fa"
+    2018/03/28 11:12:15.645975 [DEBUG] client: updated allocations at index 1 (total 0) (pulled 0) (filtered 0)
+    2018/03/28 11:12:15.646251 [DEBUG] client: allocs: (added 0) (removed 0) (updated 0) (ignore 0)
+    2018/03/28 11:12:15.647251 [INFO] client: node registration complete
+    2018/03/28 11:12:15.648691 [DEBUG] client.consul: bootstrap contacting following Consul DCs: ["dc1"]
+    2018/03/28 11:12:15.649435 [ERR] client.consul: error discovering nomad servers: no Nomad Servers advertising service "nomad" in Consul datacenters: ["dc1"]
+    2018/03/28 11:12:15.649509 [DEBUG] client: periodically checking for node changes at duration 5s
+    2018/03/28 11:12:15.650224 [DEBUG] client: state updated to ready
+    2018/03/28 11:12:19.985698 [DEBUG] consul.sync: registered 3 services, 4 checks; deregistered 0 services, 0 checks
+    2018/03/28 11:12:19.985718 [INFO] consul.sync: successfully updated services in Consul
+    2018/03/28 11:12:19.986771 [DEBUG] consul.sync: registered 0 services, 0 checks; deregistered 0 services, 0 checks
+    2018/03/28 11:12:22 [INFO] agent: Synced check "73a0846d8aa93beec9bdfad21cc468e354567185"
+    2018/03/28 11:12:25 [INFO] agent: Synced check "b6aeda9f457bd83d772b524ddf2f4979e8c5e8bf"
+    2018/03/28 11:12:25 [INFO] agent: Synced check "1e107f9eaa6fae472b4e6749fa9dbbf83ce59bf1"
+    2018/03/28 11:12:29 [INFO] agent: Synced check "0451a7341e3fd52340e75931d7cffacbe14117ac"
+    2018/03/28 11:12:22.474994 [DEBUG] http: Request /v1/agent/health?type=server (544.516µs)
+    2018/03/28 11:12:25 [DEBUG] memberlist: TCP connection from=192.168.1.21:60770
+    2018/03/28 11:12:25.899827 [DEBUG] http: Request /v1/agent/health?type=client (217.552µs)
+    2018/03/28 11:12:26.613679 [INFO] fingerprint.consul: consul agent is available
+    2018/03/28 11:12:26.676123 [DEBUG] client: state changed, updating node.
+    2018/03/28 11:12:26.676880 [INFO] client: node registration complete
+    2018/03/28 11:12:29.317015 [DEBUG] client: state updated to ready
+    2018/03/28 11:12:29.317106 [WARN] client: heartbeat missed (request took 610.649µs). Heartbeat TTL was 13.870051661s and heartbeated after 2.640087426s
+    2018/03/28 11:12:32.477018 [DEBUG] http: Request /v1/agent/health?type=server (178.304µs)
+    2018/03/28 11:12:35 [DEBUG] memberlist: TCP connection from=192.168.1.21:60780
+    2018/03/28 11:12:35.905983 [DEBUG] http: Request /v1/agent/health?type=client (521.024µs)
+    2018/03/28 11:12:42.478372 [DEBUG] http: Request /v1/agent/health?type=server (281.138µs)
+    2018/03/28 11:12:45 [DEBUG] memberlist: TCP connection from=192.168.1.21:60794
+    2018/03/28 11:12:45.908190 [DEBUG] http: Request /v1/agent/health?type=client (170.909µs)
+    2018/03/28 11:12:52.488994 [DEBUG] http: Request /v1/agent/health?type=server (237.492µs)
+    2018/03/28 11:12:55 [DEBUG] memberlist: TCP connection from=192.168.1.21:60808
+    2018/03/28 11:12:55.911064 [DEBUG] http: Request /v1/agent/health?type=client (1.449588ms)
+    2018/03/28 11:13:02.494078 [DEBUG] http: Request /v1/agent/health?type=server (274.947µs)
+    2018/03/28 11:13:05 [DEBUG] memberlist: TCP connection from=192.168.1.21:60818
+    2018/03/28 11:13:05.916012 [DEBUG] http: Request /v1/agent/health?type=client (315.462µs)
+    2018/03/28 11:13:12.497141 [DEBUG] http: Request /v1/agent/health?type=server (155.429µs)
+    2018/03/28 11:13:15 [DEBUG] memberlist: TCP connection from=192.168.1.21:60826
+    2018/03/28 11:13:15.952635 [DEBUG] http: Request /v1/agent/health?type=client (133.111µs)
+    2018/03/28 11:13:22.499427 [DEBUG] http: Request /v1/agent/health?type=server (199.297µs)
+    2018/03/28 11:13:25 [DEBUG] memberlist: TCP connection from=192.168.1.21:60840
+    2018/03/28 11:13:25.955291 [DEBUG] http: Request /v1/agent/health?type=client (271.006µs)
+    2018/03/28 11:13:32.509705 [DEBUG] http: Request /v1/agent/health?type=server (283.801µs)
+    2018/03/28 11:13:35 [DEBUG] memberlist: TCP connection from=192.168.1.21:60852
+    2018/03/28 11:13:35.960449 [DEBUG] http: Request /v1/agent/health?type=client (223.742µs)
+    2018/03/28 11:13:42.513076 [DEBUG] http: Request /v1/agent/health?type=server (198.519µs)
+    2018/03/28 11:13:45 [DEBUG] memberlist: TCP connection from=192.168.1.21:60864
+    2018/03/28 11:13:45.962253 [DEBUG] http: Request /v1/agent/health?type=client (138.317µs)
+    2018/03/28 11:13:52.515167 [DEBUG] http: Request /v1/agent/health?type=server (214.262µs)
+    2018/03/28 11:13:55 [DEBUG] memberlist: TCP connection from=192.168.1.21:60876
+    2018/03/28 11:13:55.970541 [DEBUG] http: Request /v1/agent/health?type=client (121.195µs)
