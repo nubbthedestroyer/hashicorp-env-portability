@@ -1,1 +1,1 @@
-ami_id = "ami-c4cb13b9"
+ami_id = "ami-68ce1615"

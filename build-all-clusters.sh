@@ -22,4 +22,7 @@ cd ../example-codebase-cluster
 cd ../example-codebase-local
 ./deploy.sh
 cd ..
+
+echo "Wait for 30 seconds while the services register."
+sleep 30
 ./get-addresses.sh

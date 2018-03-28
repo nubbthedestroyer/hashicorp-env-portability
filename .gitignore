@@ -5,3 +5,7 @@
 
 # Module directory
 .terraform/
+*.log
+*.0
+screenlog.0
+*.0
